@@ -1,7 +1,19 @@
-void main() {
-  // String text = "Example text";
-  // int lengthData = countLength(text);
-  // print('Length: $lengthData');
+int countLength(String inputString) {
+  int length = 0;
+  int index = 0;
+
+  while (inputString.codeUnitAt(index) != 0) {
+    length++;
+    index++;
+  }
+
+  return length;
 }
 
-// TODO: Create a function for counting the length of a string
+void main() {
+
+  String inputString = "Test String";
+
+  int length = countLength(inputString);
+  print('Length of the string: $length');
+}
